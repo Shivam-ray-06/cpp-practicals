@@ -1,0 +1,28 @@
+=== Starting balances ===
+  Balances -> Alice: 1000.00 | Bob: 250.00
+
+=== Successful transactions ===
+- Alice deposits 200
+  SUCCESS
+- Alice withdraws 300
+  SUCCESS
+- Alice transfers 400 to Bob
+  SUCCESS
+  Balances -> Alice: 500.00 | Bob: 650.00
+
+=== Failed transactions ===
+- Alice withdraws 5000 (too much)
+  FAILED (insufficient funds): Insufficient funds: requested 5000.000000, available 500.000000
+- Alice withdraws -50 (negative)
+  FAILED (invalid amount): Invalid amount -50.000000: must be greater than zero
+- Alice transfers 9000 to Bob
+  FAILED (insufficient funds): Insufficient funds: requested 9000.000000, available 500.000000
+- Bob deposits 0
+  FAILED (invalid amount): Invalid amount 0.000000: must be greater than zero
+  Balances -> Alice: 500.00 | Bob: 650.00
+
+Balances are unchanged by the failed transactions above.
+
+What each exception means:
+  InvalidAmount     - the request itself is malformed (amount <= 0).
+  InsufficientFunds - the request is valid but the account cannot cover it.
