@@ -1,0 +1,25 @@
+
+[A] std::unique_ptr - single owner
+    [acquire] database-connection
+    using database-connection
+    old owner is null after move: true
+    using database-connection
+    leaving scope...
+    [release] database-connection
+
+[B] std::shared_ptr - shared ownership
+    [open log] app.log
+    owners after creation: 1
+    owners with two services: 3
+    [app.log] OrderService is working
+    [app.log] PaymentService is working
+    owners after services end: 1
+    leaving demo...
+    [close log] app.log
+
+[C] Many iterations with unique_ptr in a vector
+    allocated and freed 10000 integers with no manual delete
+
+Note: raw 'new' would require a matching 'delete' on every
+path, including when exceptions are thrown. Smart pointers
+release memory automatically, even on those paths.
