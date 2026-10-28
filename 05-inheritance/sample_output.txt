@@ -1,0 +1,19 @@
+=== Single inheritance: Person -> Student ===
+  [Person ctor] Anita Sharma
+  [Student ctor] CS2026-014
+Name: Anita Sharma | Age: 20
+  Student ID: CS2026-014 | Course: B.Sc. Computer Science
+
+=== Multilevel inheritance: Person -> Student -> GraduateStudent ===
+  [Person ctor] Rahul Verma
+  [Student ctor] PG2026-003
+  [GraduateStudent ctor] Deep learning for code generation
+Name: Rahul Verma | Age: 25
+  Student ID: PG2026-003 | Course: M.Sc. Computer Science
+  Research topic: Deep learning for code generation | Supervisor: Dr. Meera Iyer
+
+=== Inherited members available to each class ===
+Student object can use : displayPerson(), displayStudent()
+GraduateStudent object can use : displayPerson(), displayStudent(), displayGraduate()
+
+Viewed as a Person reference: Name: Rahul Verma | Age: 25
