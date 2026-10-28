@@ -1,0 +1,17 @@
+=== Function overloading (same name, different parameters) ===
+  [add(int,int)] 5
+  [add(double,double)] 6.25
+  [add(int,int,int)] 6
+
+=== Operator overloading with ComplexNumber ===
+z1       = 3 + 4i
+z2       = 1.5 - 2i
+z1 + z2  = 4.5 + 2i
+
+=== Test cases ===
+(3+4i) + (1.5-2i) == 4.5+2i ? true
+Zero identity: z1 + 0 == z1 ? true
+
+=== Why operator overloading is useful ===
+Expressions like 'z1 + z2' read like the maths they represent, so
+code that uses ComplexNumber stays as clear as code that uses int or double.
