@@ -1,0 +1,40 @@
+=== Generic Stack tested with three data types ===
+
+--- Stack<int> ---
+Initially empty? true
+pushed 10 | size = 1
+pushed 20 | size = 2
+pushed 30 | size = 3
+top = 30
+popping 30
+popping 20
+popping 10
+Empty after popping all? true
+Error handled: pop() called on an empty stack
+
+--- Stack<float> ---
+Initially empty? true
+pushed 1.5 | size = 1
+pushed 2.25 | size = 2
+pushed 3.75 | size = 3
+top = 3.75
+popping 3.75
+popping 2.25
+popping 1.5
+Empty after popping all? true
+Error handled: pop() called on an empty stack
+
+--- Stack<std::string> ---
+Initially empty? true
+pushed alpha | size = 1
+pushed beta | size = 2
+pushed gamma | size = 3
+top = gamma
+popping gamma
+popping beta
+popping alpha
+Empty after popping all? true
+Error handled: pop() called on an empty stack
+
+Why templates help: one class definition serves int, float and
+std::string. The compiler generates each version when it is used.
