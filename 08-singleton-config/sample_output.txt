@@ -1,0 +1,21 @@
+=== First access: configure the single instance ===
+[AppConfig] created once
+
+=== Modules read the same instance ===
+[logging] level = INFO
+[database] url = sqlite:///students.db
+
+=== Second call returns the SAME object ===
+Same object? true
+
+=== Change a setting once, see it everywhere ===
+[logging] level = DEBUG
+
+=== Full settings ===
+Current settings (instance at 0x55cac1ecf160):
+  app.name = StudentPortal
+  db.url = sqlite:///students.db
+  log.level = DEBUG
+
+=== Missing key is handled safely ===
+  caught: Missing config key: smtp.host
