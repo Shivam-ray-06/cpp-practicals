@@ -1,0 +1,19 @@
+=== Student Marks Calculator ===
+Enter your name: Ravi Kumar
+Enter your age: 20
+Enter marks in subject 1 (out of 100): 75
+Enter marks in subject 2 (out of 100): 58
+
+--- Results for Ravi Kumar ---
+Total marks       : 133
+Difference        : 17
+Product           : 4350
+Remainder of total: 1 (odd)
+Average           : 66.5
+Percentage        : 66.5 %
+Bonus (5% of avg) : 3.325
+Subject 1 higher  : true
+Average passing   : true
+Equal marks       : false
+Eligible          : true
+Needs review      : false
