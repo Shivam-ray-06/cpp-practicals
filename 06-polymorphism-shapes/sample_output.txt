@@ -1,0 +1,16 @@
+Areas calculated through the Shape interface:
+Circle     area = 78.54
+Rectangle  area = 24.00
+Triangle   area = 12.00
+Total area: 114.54
+
+Using a Shape reference:
+Rectangle  area = 49.00
+
+Invalid input test:
+  caught: Circle radius must be positive
+
+Explanation:
+  - 'virtual' lets a call through a base pointer/reference reach the derived function.
+  - '= 0' makes area() pure virtual, so Shape is abstract and cannot be created.
+  - The virtual destructor makes deleting through unique_ptr<Shape> safe.
