@@ -1,0 +1,11 @@
+=== Initial state ===
+Account SAV-1001 | Balance: 5000
+Account CUR-2002 | Balance: 1200.5
+
+=== Savings operations ===
+  [error] Deposit amount must be positive.
+Account SAV-1001 | Balance: 4500
+
+=== Current operations ===
+  [error] Insufficient balance for withdrawal of 5000.
+Account CUR-2002 | Balance: 1000.25
