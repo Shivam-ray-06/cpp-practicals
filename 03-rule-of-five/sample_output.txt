@@ -1,0 +1,49 @@
+1) Default constructor
+  [default ctor]
+empty: [] (size 0)
+
+2) Parameterised constructor
+  [parameterised ctor] size 5
+a: [7, 7, 7, 7, 7] (size 5)
+
+3) Copy constructor (deep copy)
+  [copy ctor] deep-copied 5 ints
+a: [7, 7, 7, 7, 7] (size 5)
+b: [100, 7, 7, 7, 7] (size 5)
+
+4) Copy assignment
+  [parameterised ctor] size 2
+  [copy assignment]
+  [copy ctor] deep-copied 5 ints
+  [destructor] releasing 2 ints
+c: [7, 7, 7, 7, 7] (size 5)
+
+5) Move constructor
+  [move ctor] transferred ownership
+d: [100, 7, 7, 7, 7] (size 5)
+b (moved-from): [] (size 0)
+
+6) Move assignment
+  [default ctor]
+  [move assignment]
+e: [7, 7, 7, 7, 7] (size 5)
+
+7) Returning a new object from a function
+  [parameterised ctor] size 6
+squares: [0, 1, 4, 9, 16, 25] (size 6)
+
+8) Self-assignment safety
+  [copy assignment]
+a after self-assignment: [7, 7, 7, 7, 7] (size 5)
+
+9) Bounds checking
+  caught: IntArray index out of range
+
+End of main - destructors run in reverse order:
+  [destructor] releasing 6 ints
+  [destructor] releasing 5 ints
+  [destructor] releasing 5 ints
+  [destructor] releasing 0 ints
+  [destructor] releasing 0 ints
+  [destructor] releasing 5 ints
+  [destructor] releasing 0 ints
