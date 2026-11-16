@@ -1,10 +1,6 @@
 # Compiled binaries
-app
+practical01
 *.o
 *.out
-*.exe
-
-# Editor / OS noise
-.vscode/
-.idea/
+*.dSYM/
 .DS_Store

@@ -1,0 +1,36 @@
+=== Part 1: Writing student records ===
+Saved 3 records to students.csv
+
+=== Part 2: Reading records back ===
+ID    Name                 Marks
+----  -------------------  -----
+ 101  Asha Nair            87.5
+ 102  Dev Patel            72
+ 103  Priya Menon          94.25
+Loaded 3 records
+
+=== Part 3: Handling a missing file ===
+[error] cannot open 'does_not_exist.csv' for reading
+
+=== Part 4: Malformed input in the CSV ===
+[warning] line 3 is malformed, skipped
+[warning] line 4 has non-numeric fields, skipped
+[warning] line 5 has invalid marks, skipped
+ID    Name                 Marks
+----  -------------------  -----
+ 201  Good Student         80
+Valid records loaded: 1
+
+=== Part 5: File-position functions ===
+Initial output position (tellp): 0
+After seekp(3), tellp() = 3
+After writing 3 chars, tellp() = 6
+Initial input position (tellg): 0
+After seekg(3), tellg() = 3
+Character at position 3 is 'B'; tellg() now = 4
+Total length found with seekg(0, end): 10
+
+File contents now: AAABBBAAAA
+
+Input position (get) and output position (put) are tracked separately,
+so seekg/tellg and seekp/tellp can move through the same file independently.
