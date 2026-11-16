@@ -1,5 +1,7 @@
 # Compiled binaries
 practical01
+library_app
+app
 *.o
 *.out
 *.dSYM/

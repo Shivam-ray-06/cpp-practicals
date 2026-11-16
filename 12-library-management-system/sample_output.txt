@@ -1,0 +1,64 @@
+Starting Library Management System...
+
+========================================================
+   RUNNING AUTOMATED DEMONSTRATION (NORMAL & ERROR CASES) 
+========================================================
+
+>>> 1. INITIAL CATALOG STATUS <<<
+
+========================================================================================================
+ ID   Type            Title                           Author / Subject      Status      Borrower / Shelf
+--------------------------------------------------------------------------------------------------------
+ [101] Standard Book  Object-Oriented Programming...  E. Balagurusamy       Available   -
+ [102] Standard Book  Introduction to Algorithms ...  Thomas H. Cormen      Available   -
+ [103] Standard Book  Artificial Intelligence: A ...  Stuart Russell        Available   -
+ [201] Reference Book Encyclopedia of Machine Lea...  [AI/DS Research]      Ref Only    Shelf: Rack-R1-Shelf3
+ [202] Reference Book ACM Computing Surveys (Vol....  [Computer Science]    Ref Only    Shelf: Rack-R2-Shelf1
+========================================================================================================
+ Total Catalog Items: 5
+
+>>> 2. NORMAL CASE: Issue Book ID 101 to student 'Shivam Ray' <<<
+[SUCCESS] Book ID 101 successfully issued to Shivam Ray.
+
+>>> 3. ERROR CASE 1: Attempt to re-issue already borrowed Book ID 101 <<<
+[CAUGHT EXPECTED EXCEPTION] [Library Error] Item ID 101 is already issued to: Shivam Ray
+
+>>> 4. ERROR CASE 2: Attempt to issue Reference Book ID 201 (Non-circulating) <<<
+[CAUGHT EXPECTED EXCEPTION] [Library Error] Item ID 201 ("Encyclopedia of Machine Learning") is a Reference item and cannot be issued out of the library.
+
+>>> 5. ERROR CASE 3: Attempt to issue non-existent Book ID 999 <<<
+[CAUGHT EXPECTED EXCEPTION] [Library Error] Item with ID 999 was not found in the catalog.
+
+>>> 6. NORMAL CASE: Return Book ID 101 <<<
+[SUCCESS] Book ID 101 returned and marked Available.
+
+>>> 7. ERROR CASE 4: Attempt to return already available Book ID 101 <<<
+[CAUGHT EXPECTED EXCEPTION] [Library Error] Item ID 101 is not currently issued.
+
+>>> 8. NORMAL CASE: Search by keyword 'Intelligence' <<<
+Found 1 match(es):
+ [103] Standard Book  Artificial Intelligence: A ...  Stuart Russell        Available   -
+
+>>> 9. FINAL CATALOG AND AUDIT LOG <<<
+
+========================================================================================================
+ ID   Type            Title                           Author / Subject      Status      Borrower / Shelf
+--------------------------------------------------------------------------------------------------------
+ [101] Standard Book  Object-Oriented Programming...  E. Balagurusamy       Available   -
+ [102] Standard Book  Introduction to Algorithms ...  Thomas H. Cormen      Available   -
+ [103] Standard Book  Artificial Intelligence: A ...  Stuart Russell        Available   -
+ [201] Reference Book Encyclopedia of Machine Lea...  [AI/DS Research]      Ref Only    Shelf: Rack-R1-Shelf3
+ [202] Reference Book ACM Computing Surveys (Vol....  [Computer Science]    Ref Only    Shelf: Rack-R2-Shelf1
+========================================================================================================
+ Total Catalog Items: 5
+
+
+--- Library Audit Log (3 events) ---
+ [1] Loaded 5 items from books.csv
+ [2] Issued [ID: 101] to Shivam Ray
+ [3] Returned [ID: 101] from Shivam Ray
+-----------------------------------------
+
+>>> 10. PERSISTENCE VERIFICATION: Saving catalog to 'books.csv' <<<
+[SUCCESS] Catalog persisted to disk.
+========================================================

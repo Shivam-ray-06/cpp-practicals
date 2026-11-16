@@ -1,0 +1,6 @@
+id,type,title,author_or_domain,isbn_or_shelf,is_available,borrower_name
+101,BOOK,Object-Oriented Programming with C++,E. Balagurusamy,978-0070669079,1,
+102,BOOK,Introduction to Algorithms (CLRS),Thomas H. Cormen,978-0262033848,1,
+103,BOOK,Artificial Intelligence: A Modern Approach,Stuart Russell,978-0136042594,1,
+201,REF,Encyclopedia of Machine Learning,AI/DS Research,Rack-R1-Shelf3,1,
+202,REF,ACM Computing Surveys (Vol. 55),Computer Science,Rack-R2-Shelf1,1,
