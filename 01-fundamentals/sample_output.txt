@@ -1,5 +1,5 @@
 === Student Marks Calculator ===
-Enter your name: Ravi Kumar
+Enter your name: Shivam Ray
 Enter your age: 20
 Enter marks in subject 1 (out of 100): 75
 Enter marks in subject 2 (out of 100): 58
